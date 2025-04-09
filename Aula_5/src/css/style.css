@@ -1,0 +1,54 @@
+/* .atv1 {
+    border: solid 1px black;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial;
+    
+    width: 100px;
+    height: 130px;
+    overflow: auto;
+    margin: 5px 10px 12px 15px;
+    padding: 5px 10px 12px 15px;
+}
+
+.atv2 {
+    width: 500px;
+    height: 180px;
+    border: dotted 2px black;
+    margin: 5px 8px;
+    padding: 6px 9px;
+    overflow: auto;
+}
+
+.atv3{
+    p {
+        display: inline;
+        background-color: yellow;
+    }
+    
+    span {
+        display: block;
+        background-color: grey;
+    }
+    
+} */
+
+p {
+    font-size: 35px;
+}
+div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.azul {
+    border: solid 4px blue;
+    background-color: lightblue;
+}
+.amarelo {
+    border: solid 4px red;
+    background-color: yellow;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}

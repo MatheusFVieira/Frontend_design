@@ -1,0 +1,32 @@
+div:hover{
+    font-size: large;
+    color: blue;
+}
+
+.p:first-child{
+    background-color: black;
+}
+
+input:focus{
+    background-color: black;
+    color: white;
+}
+
+p::first-letter{
+    color:blueviolet;
+    font-size: 30px;
+}
+
+button{
+    border-radius: 30%; 
+    background-color: white;
+}
+
+button:hover{
+    color:blue;
+    background-color: black;
+}
+
+.p::after{
+    background-color: black;
+}

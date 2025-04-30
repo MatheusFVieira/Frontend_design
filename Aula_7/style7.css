@@ -1,0 +1,63 @@
+#grad{
+    background-image: radial-gradient(red, yellow);
+    height: 300px;
+    width: 300px;
+}
+
+#transform{
+    background-color: yellow;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    height: 200px;
+    width: 200px;
+    /* transform: translate(10px, 20px);*/
+    /* transform: rotate(45deg);*/
+    /* transform: scale(2, 2);*/
+    /* transform: skew(20deg, 10deg); */
+    /* transform: skewX(20deg); */
+    /* transform: skewY(20deg);*/
+}
+
+/* #transform:hover{
+    transform: translate(10px, 20px);
+    transform: rotate(45deg);
+    transform: scale(2, 2);
+    transform: skew(200deg, 400grad);
+    transform: skewX(20deg);
+    transform: skewY(20deg);  
+} */
+
+#vazio{
+    border: solid 1px black;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    height: 200px;
+    width: 200px;
+}
+
+#transition{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 2s;
+}
+
+#transition:hover{
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    background-color: yellow;
+}
+
+h1{
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

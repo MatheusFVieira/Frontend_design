@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .scene {
+            margin: 80px auto;
+            width: 210px;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .carousel {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: rotate 30s infinite linear;
+        }
+
+        .carousel>img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 190px;
+            border-radius: 10px;
+            aspect-ratio: 4 / 5;
+            transform: rotateY(var(--i)) translateZ(280px);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(360deg);
+            }
+
+            100% {
+                transform: translateY(0deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="scene">
+        <div class="carousel">
+            <img style="--i:000deg" src="/Aula_9/img/1.jpg">
+            <img style="--i:040deg" src="/Aula_9/img/2.jpg">
+            <img style="--i:080deg" src="/Aula_9/img/3.avif">
+            <img style="--i:120deg" src="/Aula_9/img/4.jfif">
+            <img style="--i:160deg" src="/Aula_9/img/5.png">
+            <img style="--i:200deg" src="/Aula_9/img/6.jfif">
+            <img style="--i:240deg" src="/Aula_9/img/7.jpg">
+            <img style="--i:280deg" src="/Aula_9/img/8.png">
+            <img style="--i:320deg" src="/Aula_9/img/9.webp">
+        </div>
+    </div>
+</body>
+
+</html>

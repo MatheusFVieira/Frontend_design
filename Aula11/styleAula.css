@@ -12,36 +12,42 @@
     border: 1px solid black;
 } */
 
-header {
-    grid-area: header; 
+section.verde {
+    grid-area: verde; 
+    background-color: green;
 }
-footer {
-    grid-area: footer;
+section.azul {
+    grid-area: azul;
+    background-color: blue;
 }
-section#produtos { 
-    grid-area: produtos;
+section.rosa { 
+    grid-area: rosa;
+    background-color: pink;
 }
-section#serviços {
-    grid-area: servicos;
+section.vermelho {
+    grid-area: vermelho;
+    background-color: red;
 }
-nav {
-    grid-area: nav;
+section.verdeEscuro{
+    grid-area: verdeEscuro;
+    background-color: grey;
 }
-aside {
-    grid-area: publicidade;
+section.marrom {
+    grid-area: marrom;
+    background-color: brown;
 }
 
 #grade {
     display: grid;
     grid-template-areas:
-        "nav header header"
-        "nav produtos publicidade"
-        "nav servicos publicidade"
-        "nav footer footer";
-    grid-template-rows: 100px 1fr 1fr 75px;
-    grid-template-columns: 20% auto 15% 
+        "verde verde azul azul azul"
+        "verde verde vermelho vermelho verdeEscuro"
+        "rosa rosa vermelho vermelho marrom";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 100vh;
 }
 
 #grade > *{
-    border: solid 1px black;
+    border: radius 25px;
 }

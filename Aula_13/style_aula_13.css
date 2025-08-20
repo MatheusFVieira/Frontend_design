@@ -1,0 +1,8 @@
+.aula13{
+    border: 1px solid black;
+    background-color: lightskyblue;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Informa ao Tailwind para usar o modo de classe, ignorando o navegador.
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col items-center justify-center">
+
+    <button id="toggle-dark" class="mb-6 px-4 py-2 bg-blue-500 text-white rounded">
+        Alternar Dark Mode
+    </button>
+
+    <div class="p-6 rounded bg-gray-200 dark:bg-gray-800">
+        <p>Este card muda com o dark mode 🌙</p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('toggle-dark');
+        btn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+
+</html>

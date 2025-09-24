@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!-- <style type="text/tailwindcss">
+        @layer utilities {
+            @keyframes fade {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            @keyframes wiggle {
+                0%, 100% { transform: rotate(-3deg); }
+                50% { transform: rotate(3deg); }
+            }
+            .animate-fade {
+                animation: fade 1s ease-in-out infinite;
+            }
+            .animate-wiggle {
+                animation: wiggle 0.5s ease-in-out infinite;
+            }
+        }
+    </style> -->
+</head>
+
+<body>
+    <button class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded transition duration-300 ease-in-out">
+        Clique Suave
+    </button>
+
+    <br><br>
+
+    <div class="p-4 bg-green-300 rounded animate-fade w-20">Fade</div>
+    <button class="animate-wiggle">Treme</button>
+    <div class="animate-wiggle w-40 h-10 bg-green-500 rounded-full"></div>
+    <div class="animate-fade w-10 h-10 bg-yellow-400 rounded-full"></div>
+
+    <br><br>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, veniam. Aspernatur optio eligendi earum
+        deleniti explicabo deserunt temporibus ea asperiores corporis quibusdam nobis, sed perspiciatis quae commodi
+        accusamus tempore et beatae expedita voluptatem nihil. Unde sit dolores, rerum minima nam ipsum modi cupiditate,
+        fuga itaque dicta architecto voluptatum, sed a ut iusto necessitatibus? Saepe aliquid accusamus iste nemo iusto
+        optio incidunt repellat, hic possimus, placeat nobis fuga similique reprehenderit amet inventore? Mollitia in
+        consequatur deleniti magnam possimus ipsam nisi numquam debitis recusandae rerum voluptatem fuga quibusdam
+        accusantium veritatis consectetur aut eius voluptatibus beatae ducimus repudiandae hic, incidunt eligendi
+        perferendis quia.
+    </p>
+
+    <div class="opacity-0 bg-blue-500 m-4 w-32 h-10 transition-opacity duration-1000 delay-500" data-observe>
+        Aparece ao rolar!
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero expedita voluptatem voluptatum dolores atque,
+        voluptatibus iste deleniti soluta facilis iure? Facere, rem incidunt! Autem, laudantium non? Rem odit facilis
+        error deleniti officiis. Debitis, pariatur doloribus? Labore adipisci numquam reprehenderit rem quae recusandae
+        incidunt expedita inventore esse quia beatae veniam cum, accusantium aliquid ratione voluptas deleniti mollitia
+        magnam excepturi perspiciatis. Illum dolor eos inventore perspiciatis hic voluptatum sunt aspernatur rerum
+        soluta labore. Accusamus, reprehenderit debitis! Corrupti magni obcaecati sit, temporibus voluptate ad illo
+        alias aliquam, nisi voluptatum fugit, officiis nulla? Quis aperiam iure natus enim ullam iusto molestiae ex
+        quasi recusandae?
+    </p>
+</body>
+
+<script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+            }
+        });
+    });
+    document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
+</script>
+
+</html>

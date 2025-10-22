@@ -12,6 +12,7 @@
 
 ## Passo 1: Configurar o Projeto React com Vite + Tailwind
 
+
 Primeiro, crie um novo projeto React usando o Vite. Abra seu terminal e execute o seguinte comando:
 
 ```bash
